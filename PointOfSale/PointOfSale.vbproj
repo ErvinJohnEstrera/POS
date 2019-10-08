@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{202922F4-0E70-4093-A6FD-A57C259DA4F2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>PointOfSale.My.MyApplication</StartupObject>
+    <RootNamespace>PointOfSale</RootNamespace>
+    <AssemblyName>PointOfSale</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>PointOfSale.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>PointOfSale.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CitiFramework">
+      <HintPath>..\..\..\..\Documents\project backup\Projects\CitiFramework\CitiFramework\bin\Debug\CitiFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.17.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\clsLogin.vb" />
+    <Compile Include="Class\Master_Files\clsMenu.vb" />
+    <Compile Include="Class\Master_Files\clsUOM.vb" />
+    <Compile Include="Class\Master_Files\clsCustomer.vb" />
+    <Compile Include="Class\Master_Files\clsItems.vb" />
+    <Compile Include="Class\Master_Files\clsEmployee.vb" />
+    <Compile Include="Class\Master_Files\clsSupplier.vb" />
+    <Compile Include="Class\Master_Files\clsMenuItem.vb" />
+    <Compile Include="Class\Transaction\clsBooking.vb" />
+    <Compile Include="Class\Transaction\clsOrder.vb" />
+    <Compile Include="Class\Transaction\clsPurchaseOrder.vb" />
+    <Compile Include="Class\Transaction\clsDeliveryReceivingOrder.vb" />
+    <Compile Include="Class\Transaction\clsTable.vb" />
+    <Compile Include="Class\Transaction\RequestRawMaterial.vb" />
+    <Compile Include="Class\Utilities\clsDiscount.vb" />
+    <Compile Include="Class\Utilities\clsVat.vb" />
+    <Compile Include="Class\Transaction\clsRequestRawMaterial.vb" />
+    <Compile Include="Class\Utilities\clsLogs.vb" />
+    <Compile Include="Class\Utilities\clsUserRoles.vb" />
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master_Files\frmMenuItems.Designer.vb">
+      <DependentUpon>frmMenuItems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master_Files\frmMenuItems.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master_Files\frmMenu.Designer.vb">
+      <DependentUpon>frmMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master_Files\frmMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Search\Master_Files\luMenu.Designer.vb">
+      <DependentUpon>luMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Search\Master_Files\luMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Search\Master_Files\luMenuItem.Designer.vb">
+      <DependentUpon>luMenuItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Search\Master_Files\luMenuItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Search\Transaction\luTable.Designer.vb">
+      <DependentUpon>luTable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Search\Transaction\luTable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Search\Transaction\luRequestRawMaterial.Designer.vb">
+      <DependentUpon>luRequestRawMaterial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Search\Transaction\luRequestRawMaterial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Search\Transaction\luDeliveryReceivingOrder.Designer.vb">
+      <DependentUpon>luDeliveryReceivingOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Search\Transaction\luDeliveryReceivingOrder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Search\Transaction\luPurchaseOrder.Designer.vb">
+      <DependentUpon>luPurchaseOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Search\Transaction\luPurchaseOrder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Search\Utilities\luDiscount.Designer.vb">
+      <DependentUpon>luDiscount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Search\Utilities\luDiscount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transaction\frmOrderLists.Designer.vb">
+      <DependentUpon>frmOrderLists.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transaction\frmOrderLists.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transaction\frmBooking.Designer.vb">
+      <DependentUpon>frmBooking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transaction\frmBooking.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transaction\frmTable.Designer.vb">
+      <DependentUpon>frmTable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transaction\frmTable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transaction\frmOrder.Designer.vb">
+      <DependentUpon>frmOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transaction\frmOrder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transaction\frmRequestRawMaterial.Designer.vb">
+      <DependentUpon>frmRequestRawMaterial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transaction\frmRequestRawMaterial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transaction\frmDeliveryReceivingOrder.Designer.vb">
+      <DependentUpon>frmDeliveryReceivingOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transaction\frmDeliveryReceivingOrder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transaction\frmPurchaseOrder.Designer.vb">
+      <DependentUpon>frmPurchaseOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transaction\frmPurchaseOrder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Utilities\frmDiscount.Designer.vb">
+      <DependentUpon>frmDiscount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Utilities\frmDiscount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Utilities\frmVat.Designer.vb">
+      <DependentUpon>frmVat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Utilities\frmVat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Utilities\frmUserRole.Designer.vb">
+      <DependentUpon>frmUserRole.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Utilities\frmUserRole.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master_Files\frmItems.Designer.vb">
+      <DependentUpon>frmItems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master_Files\frmItems.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master_Files\frmSupplier.Designer.vb">
+      <DependentUpon>frmSupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master_Files\frmSupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master_Files\frmEmployee.Designer.vb">
+      <DependentUpon>frmEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master_Files\frmEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master_Files\frmUOM.Designer.vb">
+      <DependentUpon>frmUOM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master_Files\frmUOM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master_Files\frmCategory.Designer.vb">
+      <DependentUpon>frmCategory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master_Files\frmCategory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master_Files\frmCustomer.Designer.vb">
+      <DependentUpon>frmCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master_Files\frmCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Search\Master_Files\luItems.Designer.vb">
+      <DependentUpon>luItems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Search\Master_Files\luItems.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Search\Master_Files\luSupplier.Designer.vb">
+      <DependentUpon>luSupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Search\Master_Files\luSupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Search\Master_Files\luEmployee.Designer.vb">
+      <DependentUpon>luEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Search\Master_Files\luEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Search\Master_Files\luCustomer.Designer.vb">
+      <DependentUpon>luCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Search\Master_Files\luCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Utilities\frmLogs.Designer.vb">
+      <DependentUpon>frmLogs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Utilities\frmLogs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.vb">
+      <DependentUpon>login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mdiMain.Designer.vb">
+      <DependentUpon>mdiMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mdiMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class\Master_Files\clsCategory.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master_Files\frmMenuItems.resx">
+      <DependentUpon>frmMenuItems.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master_Files\frmMenu.resx">
+      <DependentUpon>frmMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Search\Master_Files\luMenu.resx">
+      <DependentUpon>luMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Search\Master_Files\luMenuItem.resx">
+      <DependentUpon>luMenuItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Search\Transaction\luTable.resx">
+      <DependentUpon>luTable.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Search\Transaction\luRequestRawMaterial.resx">
+      <DependentUpon>luRequestRawMaterial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Search\Transaction\luDeliveryReceivingOrder.resx">
+      <DependentUpon>luDeliveryReceivingOrder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Search\Transaction\luPurchaseOrder.resx">
+      <DependentUpon>luPurchaseOrder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Search\Utilities\luDiscount.resx">
+      <DependentUpon>luDiscount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transaction\frmOrderLists.resx">
+      <DependentUpon>frmOrderLists.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transaction\frmBooking.resx">
+      <DependentUpon>frmBooking.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transaction\frmTable.resx">
+      <DependentUpon>frmTable.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transaction\frmOrder.resx">
+      <DependentUpon>frmOrder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transaction\frmRequestRawMaterial.resx">
+      <DependentUpon>frmRequestRawMaterial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transaction\frmDeliveryReceivingOrder.resx">
+      <DependentUpon>frmDeliveryReceivingOrder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transaction\frmPurchaseOrder.resx">
+      <DependentUpon>frmPurchaseOrder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Utilities\frmDiscount.resx">
+      <DependentUpon>frmDiscount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Utilities\frmVat.resx">
+      <DependentUpon>frmVat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Utilities\frmUserRole.resx">
+      <DependentUpon>frmUserRole.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master_Files\frmItems.resx">
+      <DependentUpon>frmItems.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master_Files\frmSupplier.resx">
+      <DependentUpon>frmSupplier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master_Files\frmEmployee.resx">
+      <DependentUpon>frmEmployee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master_Files\frmUOM.resx">
+      <DependentUpon>frmUOM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master_Files\frmCategory.resx">
+      <DependentUpon>frmCategory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master_Files\frmCustomer.resx">
+      <DependentUpon>frmCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Search\Master_Files\luItems.resx">
+      <DependentUpon>luItems.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Search\Master_Files\luSupplier.resx">
+      <DependentUpon>luSupplier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Search\Master_Files\luEmployee.resx">
+      <DependentUpon>luEmployee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Search\Master_Files\luCustomer.resx">
+      <DependentUpon>luCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Utilities\frmLogs.resx">
+      <DependentUpon>frmLogs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mdiMain.resx">
+      <DependentUpon>mdiMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
+    <Folder Include="Reports\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
