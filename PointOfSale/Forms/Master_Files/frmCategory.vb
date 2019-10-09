@@ -11,7 +11,6 @@ Public Class frmCategory
     End Enum
 
     Dim strAddmode As AddMode
-
     Dim rs As SqlDataReader
 
     Dim mf As New modFunctions
@@ -231,11 +230,6 @@ Public Class frmCategory
 
 #End Region
 
-
-    Private Sub btnPost_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-    End Sub
-
     Private Sub dgView_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgView.CellClick
         Dim i As Integer
         i = dgView.CurrentRow.Index
@@ -251,4 +245,5 @@ Public Class frmCategory
         btnCancel.Enabled = True
         btnSave.Enabled = False
     End Sub
+
 End Class
